@@ -1,0 +1,17 @@
+﻿@page
+@model TicTacToe.Pages.TicTacToe2ModelModel
+@{
+    ViewData["Title"] = "TicTacToe2Model";
+}
+
+<h2>TicTacToe2Model</h2>
+
+@for(int x = 0; x < Model.Board.GetLength(0); x++;) {
+<div class="row">
+    @for (int y = 0; y < Model.Board.GetLength(1); y++)
+    {
+        <div class="square">@Model.Board[x, y]</div>
+    }
+</div>
+}
+
